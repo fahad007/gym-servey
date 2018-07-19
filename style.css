@@ -1074,6 +1074,9 @@ main.servey-2018-07 {
     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.1)) repeat 0 0%, rgba(0, 0, 0, 0) url("img/bg-1.jpg") no-repeat left bottom / cover;
     height: 150%;
 }
+.servey-2018-07 .page-4 .moving-area .moving-img-1 {
+    display: none;
+}
 
 }
 @media only screen and (max-width: 575px) {
