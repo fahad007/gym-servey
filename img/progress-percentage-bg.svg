@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="175px" height="45px" viewBox="0 0 175 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="1603.90625%" x2="0%" y2="1603.90625%" id="linearGradient-1">
+            <stop stop-color="#91EF31" offset="0%"></stop>
+            <stop stop-color="#CEEF31" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.9" opacity="0.900000036">
+        <g id="Progressbar/Default" transform="translate(-413.000000, 0.000000)" fill="url(#linearGradient-1)">
+            <path d="M587.52002,44.2244804 C548.345885,44.2129191 548.207031,0 500.414021,0 C452.62101,1.48905479e-15 454.756134,44.2284042 413.309998,44.2176993 C439.45776,44.2176993 564.875288,44.4453125 587.52002,44.2244804 Z" id="Oval-Copy"></path>
+        </g>
+    </g>
+</svg>

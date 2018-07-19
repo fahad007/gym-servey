@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://vshred.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://vshred.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://vshred.com/favicon-16x16.png">
+    <link rel="manifest" href="https://vshred.com/manifest.json">
+    <link rel="mask-icon" href="https://vshred.com/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <title>V Shred</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="V Shred">
+    <link href="stack/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="stack/css/stack-interface.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="stack/css/socicon.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="stack/css/iconsmind.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="stack/css/flickity.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="stack/css/jquery.steps.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="stack/css/theme.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="https://vshred.com/css/side-menu.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="https://vshred.com/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="https://vshred.com/css/mobile-menus.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="https://vshred.com/css/member.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="https://vshred.com/css/bootstrap4PaddingMargins.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body class="" >
+    <a id="start"></a>
+
+    <nav class="fixed-nav hidden-sm hidden-md hidden-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 text-center">
+                    <a onclick="openNav()">
+                        <i class="material-icons">menu</i>
+                    </a>
+                </div>
+                <div class="col-xs-6 text-center">
+                    <img alt="V Shred" src="https://vshred.com/img/logo.svg" height="26" style="margin-bottom: 5px">
+                </div>
+                <div class="col-xs-3 text-center">
+                    <a href="https://vinsanityshred.zendesk.com/hc/en-us" target="_blank"><i class="material-icons">help</i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="mySidenav" class="sidenav">
+        <div class="p-4">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <center><img alt="V Shred" src="https://vshred.com/img/logo-vs-white.svg" style="width: 30px; margin-bottom: 3em;"></center>
+            <a href="https://vshred.com/member">My Stuff</a>
+            <a href="https://vshred.com">Home</a>
+            <a href="https://vshred.com/programs">Store</a>
+            <a href="https://vshred.com/supplements-female">Female Supplement Guide</a>
+            <a href="https://vshred.com/supplements">Male Supplement Guide</a>
+            <a href="https://vshred.com/blog">Blog</a>
+            <hr class="dashed">
+            <a href="https://vinsanityshred.zendesk.com/hc/en-us" target="_blank"><i class="fa fa-question-circle-o" aria-hidden="true"></i> Support Center</a>
+        </div>
+    </div>
+    <div class="nav-container hidden-xs">
+        <div class="bar bar--sm visible-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2">
+                        <a href="/">
+                            <img class="logo logo-dark" alt="logo" src="https://vshred.com/img/logo.svg">
+                            <img class="logo logo-light" alt="logo" src="https://vshred.com/img/logo-light.svg">
+                        </a>
+                    </div>
+                    <div class="col-xs-9 col-sm-10 text-right">
+                        <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs">
+                            <i class="icon icon--sm stack-interface stack-menu"></i>
+                        </a>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </div>
+        <!--end bar-->
+        <nav id="menu1" class="bar bar--sm bar-1 hidden-xs " data-scroll-class='100vh:pos-fixed'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1 col-sm-2 hidden-xs">
+                        <div class="bar__module">
+                            <a href="/">
+                                <img class="logo logo-dark" alt="logo" src="https://vshred.com/img/logo.svg">
+                                <img class="logo logo-light" alt="logo" src="https://vshred.com/img/logo-light.svg">
+                            </a>
+                        </div>
+                        <!--end module-->
+                    </div>
+                    <div class="col-md-11 col-sm-12 text-right text-left-xs text-left-sm">
+                        <div class="bar__module">
+                            <ul class="menu-horizontal text-left">
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+                                <li>
+                                    <a href="https://vshred.com/programs">Store</a>
+                                </li>
+                                <li class="dropdown">
+                                    <span class="dropdown__trigger">Supplements</span>
+                                    <div class="dropdown__container">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="dropdown__content col-md-2 col-sm-4">
+                                                    <ul class="menu-vertical">
+                                                        <li class="">
+                                                            <a href="https://vshred.com/supplements-female">
+                                                                Female Guide
+                                                            </a>
+                                                        </li>
+                                                        <li class="">
+                                                            <a href="https://vshred.com/supplements">
+                                                                Male Guide
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="https://vshred.com/blog">Blog</a>
+                                </li>
+
+                                <li class="dropdown">
+                                    <div class="bar__module">
+                                        <a class="btn btn--sm type--uppercase" href="https://vshred.com/login">
+                                            <span class="btn__text">Login</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--end module-->
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </nav>
+        <!--end bar-->
+    </div>
+
+    <div class="main-container">
+
+
+
+
+
+
+
+
+
+
+
+
+    <main class="servey-2018-07">
+
+    <form accept-charset="UTF-8" action="" method="GET" data-form>
+
+        <input name="condition" type="hidden">
+        <input name="segment" type="hidden">
+        <input name="gender" type="hidden" value="male">
+        <input name="age" type="hidden">
+        <input name="activity" type="hidden">
+        <input name="macrogoal" type="hidden">
+
+        <input name="utm_source" type="hidden" value="none">
+        <input name="utm_medium" type="hidden" value="none">
+        <input name="utm_campaign" type="hidden" value="none">
+        <input name="utm_term" type="hidden" value="none">
+        <input name="utm_content" type="hidden" value="none">
+
+        <input name="units" type="hidden" value="imperial">
+        <input name="feet" type="hidden" value="0">
+        <input name="inches" type="hidden" value="0">
+        <input name="centimeters" type="hidden" value="90">
+        <input name="weight" type="hidden" value="0">
+        <input name="kilograms" type="hidden" value="0">
+    </form>
+    
+    <div class="pages-area">
+            <div class="pages">
+
+                <div class="page page-1 page-option" data-page="gender">
+                    <div class="moving-area">
+                        <div class="moving-img-1">
+                            <img src="img/img-1.png" class="moving-image" />
+                        </div>
+                        <div class="moving-img-2">
+                            <img src="img/img-2.png" class="moving-image" />
+                        </div>
+                    </div>
+                    <h1 class="main-title">Find out EXACTLY What Diet &amp; Training is Best For You</h1>
+                    <div class="container">
+                        <h2>Are you a Woman or a Man?</h2>
+                        <div class="options">
+                            <div data-name="gender" data-value="male">
+                                <img src="img/male.png" alt="">
+                                <p>Male</p>
+                            </div>
+                            <div data-name="gender" data-value="female">
+                                <img src="img/female.png" alt="">
+                                <p>female</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="page page-2" data-page="age">
+                    <div class="moving-area">
+                        <div class="moving-img-1">
+                            <img src="img/age-1.png" class="moving-image" />
+                        </div>
+                        <div class="moving-img-2">
+                            <img src="img/age-1.png" class="moving-image" />
+                        </div>
+                    </div>
+                    <div class="page-area-title">
+                        <div class="container-fluid">
+                            <div class="icon-area"><img src="img/logo-1.png" alt=""></div>
+                            <h1 class="main-title">Find out EXACTLY What Diet &amp; Training is Best For You</h1>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <h2>What is Your Age Range?</h2>
+                        <div class="buttons">
+                            <div data-name="age" data-value="18">
+                                TEENS
+                            </div>
+                            <div data-name="age" data-value="25">
+                                20s
+                            </div>
+                            <div data-name="age" data-value="35">
+                                30s
+                            </div>
+                            <div data-name="age" data-value="45">
+                                40s
+                            </div>
+                            <div data-name="age" data-value="55">
+                                50s
+                            </div>
+                            <div data-name="age" data-value="65">
+                                60s
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="page page-3" data-page="height">
+                    <div class="moving-area">
+                        <div class="moving-img-1">
+                            <img src="img/height-1.png" class="moving-image" />
+                        </div>
+                        <div class="moving-img-2">
+                            <img src="img/height-1.png" class="moving-image" />
+                        </div>
+                    </div>
+                    <div class="page-area-title">
+                        <div class="container-fluid">
+                            <div class="icon-area"><img src="img/logo-1.png" alt=""></div>
+                            <h1 class="main-title">Find out EXACTLY What Diet &amp; Training is Best For You</h1>
+                        </div>
+                    </div>
+
+                    <div class="container">                         
+                        <h2>Your Height</h2>
+                        <div class="tabs">
+                            <div class="active" data-name="units" data-value="imperial" data-prevent-procced="true">
+                                Imperial
+                            </div>
+                            <div data-name="units" data-value="metric" data-prevent-procced="true">
+                                Metric
+                            </div>
+                        </div>
+                        <div data-depend="units" data-if="imperial" style="display:block">
+                            <h3>Height: <span data-show-value="feet">0</span>'<span data-show-value="inches">0</span>"</h3>
+                            <label><p>Feet</p><input type="range" min="0" max="7" value="0" data-bind="feet"></label>
+                            <label><p>Inches</p><input type="range" min="0" max="12" value="0" data-bind="inches"></label>
+                        </div>
+                        <div data-depend="units" data-if="metric">
+                            <h3><span data-show-value="centimeters">90</span>cm</h3>
+                            <label><p>Centimeters</p><input type="range" min="90" max="220" value="90" data-bind="centimeters"></label>
+                        </div>
+                        <button type="button" data-continue>Continue</button>
+                    </div>
+                </div>
+
+
+                <div class="page page-4" data-page="weight">
+                    <div class="moving-area">
+                        <div class="moving-img-1">
+                            <img src="img/img-1.png" class="moving-image" />
+                        </div>
+                        <div class="moving-img-2">
+                            <img src="img/img-2.png" class="moving-image" />
+                        </div>
+                    </div>
+                    <div class="page-area-title">
+                        <div class="container-fluid">
+                            <div class="icon-area"><img src="img/logo-1.png" alt=""></div>
+                            <h1 class="main-title">Find out EXACTLY What Diet &amp; Training is Best For You</h1>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <h2>How Much Do You Weight?</h2>
+                        <div data-depend="units" data-if="imperial" style="display:block">
+                            <h3>
+                                <span data-show-value="weight">0</span> lbs
+                            </h3>
+                            <label>
+                                <input type="range" min="0" max="400" value="0" data-bind="weight">
+                            </label>
+                        </div>
+                        <div data-depend="units" data-if="metric">
+                            <h3>
+                                <span data-show-value="kilograms">0</span> kg
+                            </h3>
+                            <label>
+                                <input type="range" min="0" max="400" value="0" data-bind="kilograms">
+                            </label>
+                        </div>
+                        <button type="button" data-continue>Continue</button>
+                    </div>
+                </div>
+
+
+                <div class="page page-5" data-page="activity">
+                    <div class="moving-area">
+                        <div class="moving-img-1">
+                            <img src="img/active-1.png" class="moving-image" />
+                        </div>
+                        <div class="moving-img-2 text-right">
+                            <img src="img/active-2.png" class="moving-image" />
+                        </div>
+                    </div>
+                    <div class="page-area-title">
+                        <div class="container-fluid">
+                            <div class="icon-area"><img src="img/logo-1.png" alt=""></div>
+                            <h1 class="main-title">Find out EXACTLY What Diet &amp; Training is Best For You</h1>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                            <h2>How Active Are You?</h2>
+                        <div class="buttons">
+                            <div data-name="activity" data-value="light">
+                                LIGHTLY ACTIVE
+                            </div>
+                            <div data-name="activity" data-value="moderate">
+                                MODERATELY ACTIVE
+                            </div>
+                            <div data-name="activity" data-value="very">
+                                VERY ACTIVE
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="page page-6" data-page="condition" data-submit>
+                    <div class="moving-area">
+                        <div class="moving-img-1">
+                            <img src="img/shape-1.png" class="moving-image" />
+                        </div>
+                        <div class="moving-img-2">
+                            <img src="img/shape-2.png" class="moving-image" />
+                        </div>
+                    </div>
+                    <div class="page-area-title">
+                        <div class="container-fluid">
+                            <div class="icon-area"><img src="img/logo-1.png" alt=""></div>
+                            <h1 class="main-title">Find out EXACTLY What Diet &amp; Training is Best For You</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="container">
+                        <h2>Which Best Describes You?</h2>
+                        <div class="buttons buttons-big" data-depend="gender" data-if="male" style="display:block">
+                            <div data-name="condition" data-value="maleHardGainer">
+                                I can't get bigger or gain muscle, no matter how much I eat or lift.
+                            </div>
+                            <div data-name="condition" data-value="maleSkinnyFat">
+                                I'm 'skinny fat'. I look slim in clothes, but I do have body fat.
+                            </div>
+                            <div data-name="condition" data-value="maleGetRipped">
+                                I'm happy with my body but I need to lose one layer of fat.
+                            </div>
+                            <div data-name="condition" data-value="maleFatLoss">
+                                I'm not happy with my body, and want to lose a serious amount of weight.
+                            </div>
+                        </div>
+                        <div class="buttons buttons-big" data-depend="gender" data-if="female">
+                            <div data-name="condition" data-value="femaleGetToned">
+                                I'm SOFT. I need to lose 5 to 10lbs and tone up my stomach, butt and arms.
+                            </div>
+                            <div data-name="condition" data-value="femaleFatLoss">
+                                I have 20lbs or more FAT I really need to lose while building sexy muscle tone.
+                            </div>
+                            <div data-name="condition" data-value="femaleSkinnyFat">
+                                I'm SKINNY. I need to add some toned muscle while burning that stubborn fat in certain areas & I would look amazing.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="progress-conteoller">
+                <div class="container">
+                    <span class="data-progress">
+                        <span data-progress>0</span>%
+                    </span>
+                    <div class="page-control">
+                        <div class="page-control-button">
+                            <button type="button" data-back>Back</button>
+                        </div>
+                        <div class="page-status">
+                            <span>Gender</span>
+                            <span>Age</span>
+                            <span>Height</span>
+                            <span>Weight</span>
+                            <span>Activity</span>
+                            <span>Condition</span>
+                            <div class="green-line"></div>
+                        </div>
+                        <div class="page-control-button">
+                            <button type="button" data-next="true" class="next-button disable">Next</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer class="fixed-footer hidden-sm hidden-md hidden-lg">
+            <div class="container" style="padding-top: 4px;">
+                <div class="row">
+                    <div class="col-xs-3 text-center">
+                        <a href="https://vshred.com" class="nav--button">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <div>Home</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-3 text-center">
+                        <a href="https://vshred.com/programs" class="nav--button">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <div>Store</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-3 text-center">
+                        <a href="https://vshred.com/supplements" class="nav--button">
+                            <img src="https://vshred.com/img/protein-bottle.svg" height="24" class="m-0 p-0">
+                            <div>Supplements</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-3 text-center">
+                        <a href="https://vshred.com/member" class="nav--button">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            <div class="nav--small">My Stuff</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <footer class="text-center-xs space--xs ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-right text-center-xs">
+                        <ul class="social-list list-inline list--hover">
+                            <li>
+                                <a href="https://www.youtube.com/vshred" target="_blank">
+                                    <i class="socicon socicon-youtube icon icon--xs"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/thevinsanityshred/" target="_blank">
+                                    <i class="socicon socicon-facebook icon icon--xs"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/vshred_/" target="_blank">
+                                    <i class="socicon socicon-instagram icon icon--xs"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--end of row-->
+                <div class="row">
+                    <div class="col-sm-7">
+                        <span class="type--fine-print">&copy;
+                            <span class="update-year"></span> 
+                            V Shred LLC
+                        </span>
+                        <a class="type--fine-print" href="https://vshred.com/privacy-policy">Privacy Policy</a>
+                        <a class="type--fine-print" href="https://vshred.com/terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    <div class="col-sm-5 text-right text-center-xs">
+                        <a class="type--fine-print" href="https://vinsanityshred.zendesk.com/hc/en-us/requests/new" target="_blank">support@vshred.com</a>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </footer>
+    </div>
+
+
+    <script src="https://vshred.com/js/app.320c200e385710cda180.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+    <script src="stack/js/flickity.min.js"></script>
+    <script src="stack/js/parallax.js"></script>
+    <script src="stack/js/typed.min.js"></script>
+    <script src="stack/js/datepicker.js"></script>
+    <script src="stack/js/isotope.min.js"></script>
+    <script src="stack/js/ytplayer.min.js"></script>
+    <script src="stack/js/jquery.steps.min.js"></script>
+    <script src="stack/js/smooth-scroll.min.js"></script>
+    <script src="stack/js/scripts.js"></script>
+    <script src="https://vshred.com/js/side-menu.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
